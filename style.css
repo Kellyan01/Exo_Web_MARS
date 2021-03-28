@@ -39,26 +39,33 @@ a {
 /*--------------------------------
 ----------- NAVIGATION -----------
 --------------------------------*/
+.bandeau_logo {
+    background-color: #000;
+    font-weight: bold;
+    padding-top: 15px;
+}
+
 nav {
     background-color: #000;
     font-weight: bold;
-    padding: 15px 0;
+    padding:15px 0;
+    position: sticky;
+    top: 0;
 }
 
-.wrapper div {
+.wrapper div  {
     padding:0 30px;
 }
 
 .logo {
     height:60px;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
+    margin-left: 30px;
 }
 
 .menu{
     display: flex;
     justify-content: space-between;
-    position: sticky;
-    top: 0;
 }
 
 .menu ul {
@@ -66,7 +73,11 @@ nav {
 }
 
 .menu_lien li {
-    margin-right: 30px;;
+    margin-right: 30px;
+}
+
+.menu_lien li:last-child {
+    margin-right: 0;
 }
 
 .menu_lien a:hover {
@@ -92,30 +103,33 @@ nav {
 
 header {
     background: url(/img/Beach-Biking.jpg) no-repeat;
-    background-size: 100%;
+    background-size: cover;
     background-position: 50% 50%;
+}
+
+.bandeau {
     background-color: rgba(0,0,0,0.5);
     color: #fff;
     display: grid;
+    column-gap: 50px;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 2fr 1fr;
+    grid-template-rows: 3fr 2fr;
     height: 700px;
+    padding-left: 7.5%;
+    padding-right: 7.5%;
 }
 
 .bandeau_titre {
     align-self: end;
-    /*justify-self: center;*/
     grid-column: 1;
     grid-row: 1;
     margin-bottom: 60px;
-    margin-left: 150px;
 }
 
 .bandeau_titre h1 {
     font-family: Lora, 'Courier New', Courier, monospace;
     font-size: 3em;
     text-align: center;
-    margin-left: -75px;
 }
 
 .bandeau_titre h2 {
@@ -127,7 +141,6 @@ header {
     align-items: center;
     text-align: center;
     height: 150px;
-    width:700px;
     margin-top: 30px;
     padding: 20px;
 }
@@ -138,7 +151,6 @@ header {
     grid-column: 2;
     grid-row: 1;
     margin-bottom: 60px;
-    margin-right: 150px;
     font-size: 1.75em;
     font-variant: small-caps;
     text-align: center;
@@ -148,8 +160,29 @@ header {
     color: #ff914d;
     font-size: 5rem;
 }
+
 .bandeau_accroche {
     grid-column: 1 /span 2;
     grid-row: 2;
-    margin-left: 150px;
+    font-size: 1.5em;
+    font-weight: bold;
+    line-height: 1.6em;
+}
+
+.bandeau_accroche span {
+    text-decoration: underline;
+}
+
+.bandeau_accroche h2 {
+    font-size: 1.8em;
+    margin: 10px 0;
+}
+
+.bandeau_accroche a:hover {
+    color: #000;
+}
+
+.bandeau_accroche p:last-child {
+    font-size: 0.7em;
+    font-weight: normal;
 }
